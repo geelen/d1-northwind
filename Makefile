@@ -35,9 +35,9 @@ staging:
 	npx wrangler publish --env staging
 
 publish:
-	npx wrangler kv:key put app.js --path ./dist/app.js --binding assets --env production
-	npx wrangler kv:key put app.css --path ./dist/app.css --binding assets --env production
-	npx wrangler publish --env production
+	npx wrangler kv:key put app.js --path ./dist/app.js --binding assets
+	npx wrangler kv:key put app.css --path ./dist/app.css --binding assets
+	npx wrangler publish
 
 tail:
 	npx wrangler tail --env production

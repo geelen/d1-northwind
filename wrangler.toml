@@ -1,0 +1,21 @@
+name = "d1-northwind"
+main = "dist/index.mjs"
+account_id = "cd3d2f25fb7dfdd4e8be7f187b2cbad1"
+workers_dev = true
+compatibility_date = "2022-07-09"
+
+[build]
+command = "npm run build"
+watch_dir = "worker"
+
+[vars]
+USE_KV_PAGES = "true"
+
+[[kv_namespaces]]
+binding = "assets"
+id = "6a6d8d406d784895a13ab6c3eceba4c8"
+
+[[ d1_databases ]]
+binding = "DB" # i.e. available in your Worker on env.DB
+database_name = "northwind-v3-dog"
+database_id = "34ac023e-fcd1-40b6-a618-abab31a0d792"

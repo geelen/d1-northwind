@@ -2,7 +2,7 @@ import { terser } from "rollup-plugin-terser";
 // import { string } from "rollup-plugin-string";
 import { nodeResolve } from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
-import babel from "@rollup/plugin-babel";
+import { babel } from "@rollup/plugin-babel";
 import postcss from "rollup-plugin-postcss";
 import postcssImport from "postcss-import";
 import tailwindcss from "tailwindcss";
@@ -43,7 +43,7 @@ export default [
             }),
             commonjs(),
             nodeResolve({ browser: true }),
-            terser(),
+            //terser(),
         ],
     },
 ];
